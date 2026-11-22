@@ -1,0 +1,23 @@
+name: Дефект
+description: Регистриране на проблем по време на тестване
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Стъпки за възпроизвеждане
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Очакван резултат
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Реален резултат
+    validations:
+      required: true

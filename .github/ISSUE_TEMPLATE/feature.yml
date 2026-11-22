@@ -1,0 +1,23 @@
+name: Функционална задача
+description: Задача по реализация на ChargeFlow
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Цел и обхват
+      description: Кое потребителско изискване решава задачата?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерии за приемане
+      description: Как ще проверим, че задачата е готова?
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Зависимости и свързани изисквания
