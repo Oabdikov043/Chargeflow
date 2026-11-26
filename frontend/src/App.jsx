@@ -1,6 +1,30 @@
-import {useEffect,useState} from 'react';
-export default function App(){
- const [health,setHealth]=useState('проверка...');
- useEffect(()=>{fetch('/api/health').then(r=>r.json()).then(d=>setHealth(d.status)).catch(()=>setHealth('няма връзка'))},[]);
- return <main><span className="pill">Университетски проект · starter</span><h1>⚡ ChargeFlow</h1><p>Симулация и динамична оптимизация на зарядната мощност за електромобили.</p><section className="panel"><h2>Стартова конфигурация</h2><p><b>Backend:</b> {health}</p><p>Функционалните модули ще се разработват от екипа съгласно архитектурния проект и GitHub Issues.</p></section><footer>Този екран е само начален skeleton. Реални алгоритми, OCPP и база данни все още не са имплементирани.</footer></main>;
+
+import { Routes, Route } from "react-router";
+import Header from "./components/header/Header";
+import React from "react";
+
+function Page({ title }) {
+  return (
+    <main style={{ padding: "40px" }}>
+      <h1>{title}</h1>
+      <p>ChargeFlow – {title} page</p>
+    </main>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Page title="Dashboard" />} />
+        <Route path="/chargers" element={<Page title="Chargers" />} />
+        <Route path="/requests" element={<Page title="Requests" />} />
+        <Route path="/sessions" element={<Page title="Sessions" />} />
+        <Route path="/simulation" element={<Page title="Simulation" />} />
+        <Route path="/reports" element={<Page title="Reports" />} />
+      </Routes>
+    </>
+  );
 }

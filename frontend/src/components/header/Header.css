@@ -1,0 +1,131 @@
+
+.cf-header {
+  width: 100%;
+  background: #111827;
+  border-bottom: 1px solid #293548;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cf-header-container {
+  max-width: 1440px;
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cf-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cf-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f766e;
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+}
+
+.cf-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cf-nav-link {
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.cf-nav-link:hover,
+.cf-nav-link.cf-active {
+  color: #5eead4;
+}
+
+.cf-header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cf-demo-badge {
+  background: #064e3b;
+  color: #6ee7b7;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.cf-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #374151;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.cf-menu-button {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .cf-header-container {
+    flex-wrap: wrap;
+    padding: 16px 20px;
+  }
+
+  .cf-menu-button {
+    display: block;
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .cf-nav {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .cf-nav-open {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .cf-header-right {
+    gap: 8px;
+  }
+
+  .cf-demo-badge {
+    display: none;
+  }
+}
